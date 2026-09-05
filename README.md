@@ -72,3 +72,26 @@ Controller
    +----> External Services
 
 
+## API endpoints
+
+| Method | Endpoint           | Description                  |
+| ------ | ------------------ | ---------------------------- |
+| GET    | `/journal`         | Retrieve journal entries     |
+| GET    | `/journal/id/{id}` | Retrieve journal entry by ID |
+| POST   | `/journal`         | Create a journal entry       |
+| PUT    | `/journal/id/{id}` | Update a journal entry       |
+| DELETE | `/journal/id/{id}` | Delete a journal entry       |
+
+
+Security
+
+Protected endpoints require a valid JWT token:
+
+Authorization: Bearer <JWT_TOKEN>
+
+Public endpoints are available under:/public/**
+Admin endpoints are available under:/admin/**
+User endpoints are secured under:/user/**
+
+
+
